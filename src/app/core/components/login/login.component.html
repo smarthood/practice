@@ -1,0 +1,26 @@
+<div class="login_parent" fxLayoutAlign="center center">
+  <div class="login_container" ngClass.gt-xs="shadow" fxLayout="column" fxLayoutAlign="center center">
+    <form action="" fxLayout="column" [formGroup]="Login_detail" class="form">
+
+      <img src="../../../../assets/login_bg.png" width="100px" alt="login">
+      <mat-form-field class="example-full-width">
+        <mat-label>Your Email</mat-label>
+        <input fxFlex="100%" matInput formControlName="email">
+        <mat-error *ngIf="Login_detail?.get('email')?.hasError('required')">
+          This field is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+        <mat-error *ngIf="Login_detail?.get('email')?.hasError('required')">
+          This field is required
+        </mat-error>
+      </mat-form-field>
+      <div fxLayoutAlign="end center">
+        <a class="forgot" routerLink="/forgot">Forgot password?</a>
+      </div>
+      <button mat-button class="log-btn" color="primary" type="submit" (click)="Onsubmit()">SIGN IN</button>
+    </form>
+  </div>
+</div>

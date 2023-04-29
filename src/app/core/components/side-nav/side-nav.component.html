@@ -1,0 +1,25 @@
+<div class="container">
+  <mat-toolbar class="toolbar" color="primary">
+    <button mat-button (click)="drawer.toggle()"><mat-icon>list</mat-icon></button>
+    <span class="example-spacer"></span>
+    <span>Revision</span>
+    <span class="example-spacer"></span>
+    <button mat-button><mat-icon>logout</mat-icon></button>
+  </mat-toolbar>
+  <mat-drawer-container class="example-container" fixedviewport="true" autosize>
+    <mat-drawer #drawer fxLayout="column" [mode]='mode' opened="true">
+      <mat-nav-list fxLayout="column" fxLayoutGap="10px">
+        <mat-list-item *ngFor="let i of sidenavoptions" routerLink={{i.url}}>
+          <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <mat-icon mat-list-icon>
+              {{i.icon}}
+            </mat-icon>
+            <span class="sn">{{i.name}}</span>
+          </div>
+        </mat-list-item>
+      </mat-nav-list>
+    </mat-drawer>
+    hell0
+    <!-- <router-outlet></router-outlet> -->
+  </mat-drawer-container>
+</div>

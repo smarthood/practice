@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>{{data?.header}}</h2>
+<div *ngIf="data?.header !=='Error'" mat-dialog-content>
+  <div [class]="data.class" [innerHtml]="data?.content"></div>
+</div>
+<div *ngIf="data?.header==='Error'" mat-dialog-content fxLayout="row" fxLayoutAlign="start center">
+  <svg fxFlex="15%" class="error-icon">
+    <use xlink:href="assets/symbol-definition.svg#errors"></use>
+  </svg>
+  <p [class]="data.class" [ngClass]="data.class">{{data?.content}}</p>
+</div>
+<div mat-dialog-actions fxLayoutAlign="end end" fxLayoutGap="5px">
+  <ng-container *ngIf="data?.actionType==='confirmation'">
+    <button mat-button mat-dialog-close>No</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true">Yes</button>
+  </ng-container>
+  <button mat-raised-button *ngIf="data?.actionType==='Message'" matDialogClose color="primary">Okay</button>
+  <button mat-stroked-button *ngIf="data?.actionType !=='confirmation' &&  data?.actionType !=='Message'" matDialogClose
+    color="primary">Close</button>
+</div>

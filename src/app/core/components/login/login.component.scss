@@ -1,0 +1,61 @@
+.login_parent {
+  height: 100%;
+  background-size: cover;
+}
+
+.mdc-text-field--outlined {
+  padding: 0;
+
+}
+
+// .login_container {
+//   margin-top: 74px;
+//   margin-bottom: 74px;
+// }
+
+.timer {
+  height: 100px;
+  width: 120px;
+}
+
+// submit button
+.log-btn {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+  margin-top: 56px;
+  background-color: #4B0082;
+
+}
+
+::ng-deep {
+  .login_parent .mat-mdc-button:not(:disabled) {
+    color: white !important;
+    padding: 24px !important;
+    border-radius: 30px;
+  }
+
+  .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+  }
+
+}
+
+.forgot {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot:hover {
+  cursor: pointer;
+}
+
+.form {
+
+  width: 370px;
+  padding: 12%;
+  background-color: white;
+
+}
+
+.shadow {
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12);
+}
